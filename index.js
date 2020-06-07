@@ -18,7 +18,7 @@ var raster = new TileLayer({
 
 var view = new View({
   center: london,
-  zoom: 4
+  zoom: 6
 });
 
 var map = new Map({
@@ -34,7 +34,8 @@ coordsElement.addEventListener('change', onCoordsEntered);
 function onCoordsEntered(e){
   var latLong = e.target.value.split(",");  // parse lat,long user input
   if(latLong.length == 2){
-    var coords = fromLonLat([latLong[1], latLong[0]]); // flip lat/long for input to fromLonLat
+    console.log(latLong);
+    var coords = fromLonLat([parseFloat(latLong[1]), parseFloat(latLong[0])]); // flip lat/long for input to fromLonLat
       console.log(coords);
 
    // animate to the entered location
