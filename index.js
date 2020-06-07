@@ -31,18 +31,17 @@ coordsElement.addEventListener('change', onCoordsEntered);
 function onCoordsEntered(e){
   var latLong = e.target.value.split(",");  // parse lat,long user input
   if(latLong.length == 2){
-    console.log(latLong);
-    var coords = fromLonLat([parseFloat(latLong[1]), parseFloat(latLong[0])]); // flip lat/long for input to fromLonLat
-      console.log(coords);
+    // flip lat/long for input to fromLonLat
+    var coords = fromLonLat([parseFloat(latLong[1]), parseFloat(latLong[0])]);
 
-   // animate to the entered location
-   view.animate({
+    // animate to the entered location
+    view.animate({
       center: coords,
       duration: 500,
-   });
+    });
 
-   // use this instead if you don't want animation
-   // view.setCenter(coords);
+    // use this instead if you don't want animation
+    // view.setCenter(coords);
   }
 }
 
