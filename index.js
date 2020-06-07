@@ -2,12 +2,9 @@ import './style.css';
 import 'ol/ol.css'
 import Map from 'ol/Map.js';
 import View from 'ol/View.js';
-import { Tile as TileLayer, Vector as VectorLayer, } from 'ol/layer.js';
-import { OSM, Vector as VectorSource } from 'ol/source.js';
-import Feature from 'ol/Feature.js';
-import { LineString, Point } from 'ol/geom.js';
+import { Tile as TileLayer } from 'ol/layer.js';
+import { OSM } from 'ol/source.js';
 import { fromLonLat } from 'ol/proj.js';
-import { Stroke, Style, Icon } from 'ol/style.js';
 
 var london = fromLonLat([-0.12755, 51.507222]);
 
